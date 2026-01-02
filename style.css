@@ -1,0 +1,172 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #003366; /* Dark Blue */
+    background-color: #FFFFFF; /* White */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+#navbar {
+    position: sticky;
+    top: 0;
+    background: #003366;
+    color: white;
+    padding: 1rem 0;
+    z-index: 100;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+#navbar a:hover {
+    background: #4CAF50; /* Green */
+}
+
+/* Hero */
+#hero {
+    background: linear-gradient(to right, #003366, #4CAF50);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: #003366;
+}
+
+/* Bilingual Content */
+#bilingual-content {
+    padding: 2rem 0;
+}
+
+.lang-section {
+    flex: 1;
+    padding: 1rem;
+}
+
+.lang-section h3 {
+    color: #4CAF50;
+}
+
+/* Service Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h4 {
+    padding: 1rem;
+    color: #003366;
+}
+
+/* Footer */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Floating Buttons */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.call-btn {
+    display: none; /* Show only on mobile via JS */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #003366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+    }
+    .lang-section {
+        width: 100%;
+    }
+    .call-btn {
+        display: block;
+    }
+}
